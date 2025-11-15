@@ -41,7 +41,7 @@ def IBP(lr_img:np.array, factor_x:int, factor_y:int, mse_threshold:float=1e-3, m
     kernel = gaussian_kernel()
     HBP = np.flipud(np.fliplr(kernel))
     for i in range(max_iterations):
-        print(f"Iteration {i+1}")
+        # print(f"Iteration {i+1}")
         # Step 1: Generate LR image from current HR estimate
         lr_generated = degradation(hr_estimate, kernel, factor_x, factor_y)
 
