@@ -1,6 +1,6 @@
-Task: Bicubic, Subdir: Set5, Average PSNR: 33.24 dB, Average SSIM: 0.9846
-Task: Bicubic, Subdir: Set14, Average PSNR: 32.10 dB, Average SSIM: 0.9640
-Task: Bicubic, Subdir: BSD100, Average PSNR: 31.96 dB, Average SSIM: 0.9487
+Task: Bicubic, Subdir: Set5, Average PSNR: 33.24 dB, Average SSIM: 0.9855
+Task: Bicubic, Subdir: Set14, Average PSNR: 32.10 dB, Average SSIM: 0.9653
+Task: Bicubic, Subdir: BSD100, Average PSNR: 31.97 dB, Average SSIM: 0.9501
 Task: IBP, Subdir: Set5, Average PSNR: 32.69 dB, Average SSIM: 0.9869
 Task: IBP, Subdir: Set14, Average PSNR: 31.77 dB, Average SSIM: 0.9689
 Task: IBP, Subdir: BSD100, Average PSNR: 31.61 dB, Average SSIM: 0.9546
