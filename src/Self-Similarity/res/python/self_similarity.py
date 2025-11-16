@@ -186,4 +186,3 @@ def small_SR(I_0, s: float, patch_size= 7, search_size= 21, overlap= 0.2):
 
     return np.clip(I_1, 0., 1.)
 
-
