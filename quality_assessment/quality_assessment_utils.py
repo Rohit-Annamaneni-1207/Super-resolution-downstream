@@ -59,7 +59,8 @@ if __name__ == "__main__":
     write_file = open(text_file_loc, 'w') 
     outputs_prefix = "D:\\DIP Project\\outputs"
     HR_prefix = "D:\\DIP Project\\grayscale_HR_images"
-    tasks = ['Bicubic', 'IBP', 'SRCNN']
+    tasks = ['Bicubic', 'IBP', 'SRCNN', 'self_local']
+    # tasks = []
     subdirs = ['Set5', 'Set14', 'BSD100']
 
     for task in tasks:
