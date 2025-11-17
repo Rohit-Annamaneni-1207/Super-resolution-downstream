@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image
+from numpy.fft import fft2, ifft2, fftshift, ifftshift, fftfreq
 
 def psnr(img1, img2):
     """Calculate the Peak Signal-to-Noise Ratio (PSNR) between two images.
@@ -53,6 +54,7 @@ def ssim(img1, img2):
     ssim_value = luminance * contrast * structure
     return ssim_value
 
+
 if __name__ == "__main__":
 
     text_file_loc = "D:\\DIP Project\\Super-resolution-downstream\\quality_assessment\\results.txt"
@@ -70,6 +72,7 @@ if __name__ == "__main__":
 
             psnr_values = []
             ssim_values = []
+            wpsnr_values = []
 
             import os
             output_images = sorted(os.listdir(output_dir))
@@ -86,12 +89,15 @@ if __name__ == "__main__":
 
                 psnr_value = psnr(output_img_np, HR_img_np)
                 ssim_value = ssim(output_img_np, HR_img_np)
+                # wpsnr_value = calculate_wpsnr(output_img_np, HR_img_np)
 
                 psnr_values.append(psnr_value)
                 ssim_values.append(ssim_value)
+                # wpsnr_values.append(wpsnr_value)
 
             avg_psnr = np.mean(psnr_values)
             avg_ssim = np.mean(ssim_values)
+            # avg_wpsnr = np.mean(wpsnr_values)
             write_file.write(f"Task: {task}, Subdir: {subdir}, Average PSNR: {avg_psnr:.2f} dB, Average SSIM: {avg_ssim:.4f}\n")
             print(f"Task: {task}, Subdir: {subdir}, Average PSNR: {avg_psnr:.2f} dB, Average SSIM: {avg_ssim:.4f}")
 
