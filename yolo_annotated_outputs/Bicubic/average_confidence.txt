@@ -1,0 +1,1 @@
+Overall average confidence for Bicubic: 0.441
